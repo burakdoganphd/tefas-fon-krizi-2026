@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Bu yazılımı kullanırsanız lütfen aşağıdaki gibi atıf yapın."
+title: "TEFAS fon krizi 2026: veri ve kod"
+version: 0.1.0
+date-released: 2026-10-19
+license: MIT
+authors:
+  - family-names: "Doğan"
+    given-names: "Burak"
+    orcid: "https://orcid.org/0000-0002-9585-3318"
+    affiliation: "Bahçeşehir Üniversitesi, Ekonomi Bölümü"
+keywords:
+  - TEFAS
+  - investment funds
+  - fund run
+  - Türkiye
