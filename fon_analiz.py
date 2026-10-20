@@ -2,6 +2,8 @@
 """
 fon_analiz.py — fon_veri.py çıktıları üzerinde fiyat paneli analizi (JRFM makalesi, Bölüm 6.3–6.6)
 
+Kod yapay zekâ (Claude, Anthropic) kullanılarak yazılmıştır; hata olabilir.
+
 Girdi (fon_veri.py'nin yazdığı klasör, varsayılan: fon_veri_cikti):
     tefas_fiyat_gunluk.csv       tarih, kod, unvan, fiyat   (2 Haz 2025 – bugün, 2.135 fon)
     tefas_fon_listesi.csv        fonKodu, fonUnvan, fonTurAciklama, ...
@@ -278,7 +280,7 @@ def main():
         fig.text(0.40, 0.125, "diğer şirketlerin benzer fonları", fontsize=16, color=green, va="top")
         fig.text(0.72, 0.20, f"−{100 - v8['bist100']:.0f}%", fontsize=54, color=green, weight="bold", va="top")
         fig.text(0.72, 0.125, "BIST 100", fontsize=16, color=green, va="top")
-        fig.text(0.07, 0.075, "31 Ağustos = 100; 8 Ekim fiyat tarihi. Eşit ağırlıklı ortalama, 111 tasfiye fonu ve 177 karşılaştırma fonu.\nKaynak: TEFAS günlük fiyatlar, Yahoo Finance; kendi hesaplamam.\nÖn bulgudur; hesaplar kendi yazdığım kodla yapıldı, hata olabilir.", fontsize=12, color="#5C6B5E", va="top")
+        fig.text(0.07, 0.075, "31 Ağustos = 100; 8 Ekim fiyat tarihi. Eşit ağırlıklı ortalama, 111 tasfiye fonu ve 177 karşılaştırma fonu.\nKaynak: TEFAS günlük fiyatlar, Yahoo Finance; kendi hesaplamam.\nÖn bulgudur; kodu yapay zekâ kullanarak yazdım, hata olabilir.", fontsize=12, color="#5C6B5E", va="top")
         fig.savefig(out / "insta_fiyat_endeksi.png", dpi=100, facecolor=cream); plt.close(fig)
     print("bitti:", out)
 

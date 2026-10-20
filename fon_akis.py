@@ -3,6 +3,8 @@
 fon_akis.py — TEFAS "Fon Verileri → Genel Bilgiler" dışa aktarımlarından büyüklük, pay ve yatırımcı paneli;
 net para akışı, fiyat/akış ayrıştırması ve fark-içinde-fark tahmini (JRFM makalesi, Bölüm 5–6, Tablo 6–7, Şekil 5)
 
+Kod yapay zekâ (Claude, Anthropic) kullanılarak yazılmıştır; hata olabilir.
+
 Girdi
     --girdi      fon_veri.py'nin klasörü (varsayılan fon_veri_cikti): tefas_fon_listesi.csv, tasfiye_fonlari_eslesme.csv, borsa_gunluk.csv
     --buyukluk   TEFAS Fon Verileri dışa aktarımlarının bulunduğu klasör (varsayılan: buyukluk). Klasördeki bütün
@@ -408,7 +410,7 @@ def main():
         fig.text(0.40, 0.195, "milyarı yatırımcı çıkışı;\nkalanı değer kaybı", fontsize=16, color=green, va="top")
         fig.text(0.72, 0.27, f"+{ter['net_akis']:.0f}", fontsize=54, color=green, weight="bold", va="top")
         fig.text(0.72, 0.195, "milyar TL: Tera'ya\nnet giriş", fontsize=16, color=green, va="top")
-        fig.text(0.07, 0.085, "31 Ağustos–16 Eylül TEFAS kayıt tarihleri. Net akış = pay sayısındaki değişim × birim fiyat.\nKaynak: TEFAS Fon Verileri (pay sayısı, kişi sayısı, toplam değer); kendi hesaplamam.\nÖn bulgudur; hesaplar kendi yazdığım kodla yapıldı, hata olabilir.",
+        fig.text(0.07, 0.085, "31 Ağustos–16 Eylül TEFAS kayıt tarihleri. Net akış = pay sayısındaki değişim × birim fiyat.\nKaynak: TEFAS Fon Verileri (pay sayısı, kişi sayısı, toplam değer); kendi hesaplamam.\nÖn bulgudur; kodu yapay zekâ kullanarak yazdım, hata olabilir.",
                  fontsize=12, color="#5C6B5E", va="top")
         fig.savefig(out / "insta_akis.png", dpi=100, facecolor=cream); plt.close(fig)
     print("bitti:", out)

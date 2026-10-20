@@ -2,7 +2,7 @@
 
 Bu depo, Eylül 2026'da 131 fonun tasfiyesiyle sonuçlanan fon krizi üzerine yazdığım çalışma makalesinin veri çekme ve analiz kodlarını içerir. Makale hazırlık aşamasındadır: *Anatomy of a Regulation-Triggered Fund Run: Türkiye's 2026 Hedge-Fund Liquidation*.
 
-> **Uyarı.** Bu bir ön çalışmadır. Hesaplar kendi yazdığım kodla yapıldı; kodda ya da veride hata olabilir. Sonuçlar akademik araştırma amaçlıdır, yatırım tavsiyesi değildir ve herhangi bir kişi ya da kurum hakkında hukuki bir değerlendirme içermez. Bir hata görürseniz "Issues" bölümünden bildirirseniz sevinirim.
+> **Uyarı.** Bu bir ön çalışmadır. Kodu yapay zekâ (Claude, Anthropic) kullanarak yazdım; sonuçlardan ben sorumluyum. Kodda ya da veride hata olabilir. Sonuçlar akademik araştırma amaçlıdır, yatırım tavsiyesi değildir ve herhangi bir kişi ya da kurum hakkında hukuki bir değerlendirme içermez. Bir hata görürseniz "Issues" bölümünden bildirirseniz sevinirim.
 
 ## İçerik
 
@@ -37,14 +37,15 @@ python fon_akis.py --girdi fon_veri_cikti --buyukluk buyukluk --cikti fon_akis_c
 - TEFAS'taki yatırımcı sayısı bir gün gecikmelidir ve fon kapandıktan sonra da yayımlanmaya devam eder. Fon bazındaki sayılar toplandığında birden çok fonu olan yatırımcı birden çok kez sayılır.
 - Şirket toplamları, bir fonun aynı şirketin başka bir fonundaki payını da içerir; veri bunu ayıklamaz.
 - TEFAS pay bölünmelerini işaretlemez.
+- Kontrol olarak, tasfiye edilen fonların toplam değeri Kurul'un açıkladığı toplamla karşılaştırılır (`sonuclar/mutabakat.csv`).
 
 ## Atıf
 
-Doğan, B. (2026). *TEFAS fon krizi 2026: veri ve kod* (Sürüm 0.1.0) [Yazılım].
+Doğan, B. (2026). *TEFAS fon krizi 2026: veri ve kod* (Sürüm 0.1.1) [Yazılım].
 
 ## English summary
 
-Code for a working paper on Türkiye's 2026 fund run and the liquidation of 131 funds. The scripts pull TEFAS fund lists and daily prices; build a daily panel of units outstanding, investor counts and total values from TEFAS "Fund Data" exports; and compute net flows, a flow/valuation decomposition and two-way fixed-effects comparisons. The work is preliminary and may contain errors. It is not investment advice and makes no legal assessment of any person or institution. Raw TEFAS files are not redistributed; the section "Veriyi indirme" explains how to download them.
+Code for a working paper on Türkiye's 2026 fund run and the liquidation of 131 funds. The scripts pull TEFAS fund lists and daily prices; build a daily panel of units outstanding, investor counts and total values from TEFAS "Fund Data" exports; and compute net flows, a flow/valuation decomposition and two-way fixed-effects comparisons. The code was written with an AI assistant (Claude, Anthropic); the author is responsible for the results. The work is preliminary and may contain errors. It is not investment advice and makes no legal assessment of any person or institution. Raw TEFAS files are not redistributed; the section "Veriyi indirme" explains how to download them.
 
 ## Lisans
 

@@ -4,6 +4,8 @@
 fon_veri.py — Fon krizi makalesi için veri çekme ve ilk analiz scripti
 ======================================================================
 
+Kod yapay zekâ (Claude, Anthropic) kullanılarak yazılmıştır; hata olabilir.
+
 Ne yapar (sırasıyla):
   1. TEFAS fon listesini çeker (tüm menkul kıymet yatırım fonları, YAT).
   2. Her fon için günlük FİYAT serisini çeker (yeni TEFAS API).
